@@ -3,6 +3,10 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Inter } from 'next/font/google'
+import Navbar from "@/components/Navbar";
+import Providers from "@/components/Providers";
+
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,11 +31,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light">
+      <Providers>
       <body
         className={cn('min-h-screen font-sans antialiased grainy')}
       >
+        <Navbar />
         {children}
       </body>
+      </Providers>
     </html>
   );
 }
