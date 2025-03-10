@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
 
 import 'react-loading-skeleton/dist/skeleton.css'
+import "simplebar-react/dist/simplebar.min.css"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
